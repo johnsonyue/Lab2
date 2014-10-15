@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<include file="struts-default.xml"></include>
+	<package name="johnsonyue.struts.hello" extends="struts-default">
+		<!-- 定义4个action，由于全是一个类中的，action的method属性中添加方法名称 -->
+		<action name="result" class="johnsonyue.struts.hello.ResultAction">
+			<result name="success">/result.jsp</result>
+			<result name="empty">/empty.jsp</result>
+		</action>
+		
+		<action name="delete" class="johnsonyue.struts.hello.ResultAction" method="delete">
+			<result name="redirect">/query.jsp</result>
+		</action>
+		
+		<action name="store" class="johnsonyue.struts.hello.ResultAction" method="store">
+			<result name="redirect">/query.jsp</result>
+		</action>
+		
+		<action name="edit" class="johnsonyue.struts.hello.ResultAction" method="edit">
+			<result name="redirect">/edit.jsp</result>
+		</action>
+		
+		<action name="detail" class="johnsonyue.struts.hello.ResultAction" method="detail">
+			<result name="success">/detail.jsp</result>
+		</action>
+	</package>
+</struts>    

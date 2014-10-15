@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="johnsonyue.struts.hello" location="10,165" size="525,525">
+    <action name="result" location="310,36" size="150,87">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="result.jsp" />
+      </result>
+      <result name="empty">
+        <resourceEdge source="empty" routing="0" target="empty.jsp" />
+      </result>
+    </action>
+    <action name="delete" location="308,174" size="150,51">
+      <result name="redirect">
+        <resourceEdge source="redirect" routing="0" target="query.jsp" />
+      </result>
+    </action>
+    <action name="store" location="310,271" size="150,53">
+      <result name="redirect">
+        <resourceEdge source="redirect" routing="0" target="query.jsp" />
+      </result>
+    </action>
+    <action name="edit" location="307,347" size="150,51">
+      <result name="redirect">
+        <resourceEdge source="redirect" routing="0" target="edit.jsp" />
+      </result>
+    </action>
+    <action name="detail" location="308,454" size="150,49">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="detail.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="result.jsp" path="/result.jsp" location="587,189" size="150,55" />
+  <webResource name="empty.jsp" path="/empty.jsp" location="587,259" size="150,55" />
+  <webResource name="query.jsp" path="/query.jsp" location="579,360" size="150,55" />
+  <webResource name="edit.jsp" path="/edit.jsp" location="589,512" size="150,55" />
+  <webResource name="detail.jsp" path="/detail.jsp" location="596,610" size="150,55" />
+  <include file="struts-default.xml" location="789,10" size="150,30" />
+</Struts2Diagram>
+
